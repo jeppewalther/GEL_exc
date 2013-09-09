@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="CGLA">
+      <UniqueIdentifier>{bd21a143-34f0-4ad8-950d-5cb42ac46589}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Geometry">
+      <UniqueIdentifier>{ee690b70-f298-42f0-8426-00bec23630b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GL">
+      <UniqueIdentifier>{e505e1df-d773-4170-9336-1d453fb09f44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GLGraphics">
+      <UniqueIdentifier>{e079a70a-8654-465a-8323-0154084e04c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HMesh">
+      <UniqueIdentifier>{c84350be-b6ad-416b-92d3-88a700c580b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LinAlg">
+      <UniqueIdentifier>{e4a8d348-85b8-4fad-84f4-490c367ee314}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{d62802d5-3c4a-4e50-a90b-72035415a392}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\CGLA\ArithVec2Float.cpp">
+      <Filter>CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CGLA\ArithVec3Float.cpp">
+      <Filter>CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CGLA\eigensolution.cpp">
+      <Filter>CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CGLA\gel_rand.cpp">
+      <Filter>CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CGLA\Mat3x3d.cpp">
+      <Filter>CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CGLA\Mat3x3f.cpp">
+      <Filter>CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CGLA\Mat4x4d.cpp">
+      <Filter>CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CGLA\Mat4x4f.cpp">
+      <Filter>CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CGLA\statistics.cpp">
+      <Filter>CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CGLA\TableTrigonometry.cpp">
+      <Filter>CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CGLA\Vec2i.cpp">
+      <Filter>CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CGLA\Vec3f.cpp">
+      <Filter>CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CGLA\Vec3i.cpp">
+      <Filter>CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CGLA\ArithSqMat3x3Float.cpp">
+      <Filter>CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CGLA\ArithSqMat4x4Float.cpp">
+      <Filter>CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\build_bbtree.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\geo_load.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\geo_obj_load.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\GradientFilter.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\load_raw.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\Neighbours.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\OBox.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\Polygonizer.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\QEM.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\rply.c">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\rply_load.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\tessellate.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\ThreeDDDA.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\Triangle.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\TrilinFilter.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\TriMesh.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\verification.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\AABox.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\BBox.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\BoundingINode.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\BoundingLNode.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\BoundingNode.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\BoundingTree.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\BSPTree.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GL\glew.c">
+      <Filter>GL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLGraphics\image_DXT.c">
+      <Filter>GLGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLGraphics\image_helper.c">
+      <Filter>GLGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLGraphics\ManifoldRenderer.cpp">
+      <Filter>GLGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLGraphics\QuatTrackBall.cpp">
+      <Filter>GLGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLGraphics\SimpleTrackBall.cpp">
+      <Filter>GLGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLGraphics\SinglePassWireframeRenderer.cpp">
+      <Filter>GLGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLGraphics\SOIL.c">
+      <Filter>GLGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLGraphics\stb_image.c">
+      <Filter>GLGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLGraphics\stb_image_write.c">
+      <Filter>GLGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLGraphics\Console.cpp">
+      <Filter>GLGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLGraphics\draw.cpp">
+      <Filter>GLGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLGraphics\glsl_shader.cpp">
+      <Filter>GLGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLGraphics\GLViewController.cpp">
+      <Filter>GLGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLGraphics\IDBufferWireFrameRenderer.cpp">
+      <Filter>GLGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HMesh\load.cpp">
+      <Filter>HMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HMesh\Manifold.cpp">
+      <Filter>HMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HMesh\obj_load.cpp">
+      <Filter>HMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HMesh\obj_save.cpp">
+      <Filter>HMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HMesh\off_load.cpp">
+      <Filter>HMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HMesh\off_save.cpp">
+      <Filter>HMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HMesh\ply_load.cpp">
+      <Filter>HMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HMesh\quadric_simplify.cpp">
+      <Filter>HMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HMesh\refine_edges.cpp">
+      <Filter>HMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HMesh\triangulate.cpp">
+      <Filter>HMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HMesh\x3d_load.cpp">
+      <Filter>HMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HMesh\x3d_save.cpp">
+      <Filter>HMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HMesh\cleanup.cpp">
+      <Filter>HMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HMesh\ConnectivityKernel.cpp">
+      <Filter>HMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\LinAlg\LapackFunc.cpp">
+      <Filter>LinAlg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\LinAlg\LinAlgIO.cpp">
+      <Filter>LinAlg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Util\XmlParser.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Util\HashKey.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Util\Parse.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Util\string_utils.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\CGLA\ArithVec2Float.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\ArithVec3Float.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\ArithVec3Int.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\ArithVec4Float.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\ArithVec4Int.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\ArithVecFloat.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\ArithVecInt.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\BitMask.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\CGLA.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\eigensolution.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\ExceptionStandard.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Mat2x2d.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Mat2x2f.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Mat2x3d.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Mat2x3f.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Mat3x3d.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Mat3x3f.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Mat4x4d.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Mat4x4f.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Quatd.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Quaternion.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Quatf.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\statistics.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\TableTrigonometry.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\UnitVector.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Vec2d.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Vec2f.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Vec2i.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Vec2ui.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Vec3d.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Vec3f.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Vec3Hf.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Vec3i.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Vec3uc.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Vec3usi.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Vec4d.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Vec4f.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Vec4i.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\Vec4uc.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\ArithMatFloat.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\ArithQuat.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\ArithSqMat2x2Float.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\ArithSqMat3x3Float.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\ArithSqMat4x4Float.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\ArithSqMatFloat.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CGLA\ArithVec.h">
+      <Filter>CGLA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\BSPTree.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\build_bbtree.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\Cell.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\GradientFilter.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\GridAlgorithm.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\HGrid.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\IndexedFaceSet.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\KDTree.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\load.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\load_raw.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\Material.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\Neighbours.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\obj_load.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\OBox.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\ply_load.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\Polygonizer.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\QEM.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\Ray.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\RGrid.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\rply.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\save_raw.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\tessellate.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\ThreeDDDA.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\Triangle.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\TrilinFilter.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\TriMesh.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\verification.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\AABox.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\AncestorGrid.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\BBox.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\BoundingINode.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\BoundingLNode.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\BoundingNode.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\BoundingTree.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GL\glew.h">
+      <Filter>GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GL\glxew.h">
+      <Filter>GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GL\wglew.h">
+      <Filter>GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLGraphics\IDBufferWireFrameRenderer.h">
+      <Filter>GLGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLGraphics\image_DXT.h">
+      <Filter>GLGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLGraphics\image_helper.h">
+      <Filter>GLGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLGraphics\ManifoldRenderer.h">
+      <Filter>GLGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLGraphics\QuatTrackBall.h">
+      <Filter>GLGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLGraphics\SimpleTrackBall.h">
+      <Filter>GLGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLGraphics\SinglePassWireframeRenderer.h">
+      <Filter>GLGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLGraphics\SOIL.h">
+      <Filter>GLGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLGraphics\stb_image.h">
+      <Filter>GLGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLGraphics\stb_image_write.h">
+      <Filter>GLGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLGraphics\stbi_DDS_aug.h">
+      <Filter>GLGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLGraphics\stbi_DDS_aug_c.h">
+      <Filter>GLGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLGraphics\Console.h">
+      <Filter>GLGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLGraphics\draw.h">
+      <Filter>GLGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLGraphics\gel_gl.h">
+      <Filter>GLGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLGraphics\gel_glu.h">
+      <Filter>GLGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLGraphics\gel_glut.h">
+      <Filter>GLGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLGraphics\glsl_shader.h">
+      <Filter>GLGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLGraphics\GLViewController.h">
+      <Filter>GLGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HMesh\load.h">
+      <Filter>HMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HMesh\Manifold.h">
+      <Filter>HMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HMesh\obj_load.h">
+      <Filter>HMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HMesh\obj_save.h">
+      <Filter>HMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HMesh\off_load.h">
+      <Filter>HMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HMesh\off_save.h">
+      <Filter>HMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HMesh\ply_load.h">
+      <Filter>HMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HMesh\quadric_simplify.h">
+      <Filter>HMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HMesh\refine_edges.h">
+      <Filter>HMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HMesh\triangulate.h">
+      <Filter>HMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HMesh\Walker.h">
+      <Filter>HMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HMesh\x3d_load.h">
+      <Filter>HMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HMesh\x3d_save.h">
+      <Filter>HMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HMesh\AttributeVector.h">
+      <Filter>HMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HMesh\cleanup.h">
+      <Filter>HMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HMesh\ConnectivityKernel.h">
+      <Filter>HMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HMesh\ItemID.h">
+      <Filter>HMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HMesh\ItemVector.h">
+      <Filter>HMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HMesh\Iterators.h">
+      <Filter>HMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\LinAlg\Vector.h">
+      <Filter>LinAlg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\LinAlg\LapackFunc.h">
+      <Filter>LinAlg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\LinAlg\LinAlgIO.h">
+      <Filter>LinAlg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\LinAlg\Matrix.h">
+      <Filter>LinAlg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Util\XmlParser.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Util\ArgExtracter.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Util\Grid2D.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Util\HashKey.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Util\HashTable.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Util\Parse.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Util\ResourceManager.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Util\string_utils.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Util\Timer.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

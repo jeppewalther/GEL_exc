@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{565D3DBF-709D-4455-B8CD-7051EFE23F7B}</ProjectGuid>
+    <RootNamespace>GEL_WIN</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\lib\Debug\</OutDir>
+    <IntDir>GEL.dir\Debug\</IntDir>
+    <TargetName>GEL</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\lib\Release\</OutDir>
+    <IntDir>GEL.dir\Release\</IntDir>
+    <TargetName>GEL</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\dependencies\include;../src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_AFXDLL;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Debug</AssemblerListingLocation>
+      <ProgramDataBaseFileName>./lib/Debug/GEL.pdb</ProgramDataBaseFileName>
+      <CompileAs>Default</CompileAs>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\dependencies\include;../src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release</AssemblerListingLocation>
+      <ProgramDataBaseFileName>./lib/Release/GEL.pdb</ProgramDataBaseFileName>
+      <CompileAs>Default</CompileAs>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_AFXDLL;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\CGLA\ArithSqMat3x3Float.cpp" />
+    <ClCompile Include="..\src\CGLA\ArithSqMat4x4Float.cpp" />
+    <ClCompile Include="..\src\CGLA\ArithVec2Float.cpp" />
+    <ClCompile Include="..\src\CGLA\ArithVec3Float.cpp" />
+    <ClCompile Include="..\src\CGLA\eigensolution.cpp" />
+    <ClCompile Include="..\src\CGLA\gel_rand.cpp" />
+    <ClCompile Include="..\src\CGLA\Mat3x3d.cpp" />
+    <ClCompile Include="..\src\CGLA\Mat3x3f.cpp" />
+    <ClCompile Include="..\src\CGLA\Mat4x4d.cpp" />
+    <ClCompile Include="..\src\CGLA\Mat4x4f.cpp" />
+    <ClCompile Include="..\src\CGLA\statistics.cpp" />
+    <ClCompile Include="..\src\CGLA\TableTrigonometry.cpp" />
+    <ClCompile Include="..\src\CGLA\Vec2i.cpp" />
+    <ClCompile Include="..\src\CGLA\Vec3f.cpp" />
+    <ClCompile Include="..\src\CGLA\Vec3i.cpp" />
+    <ClCompile Include="..\src\Geometry\AABox.cpp" />
+    <ClCompile Include="..\src\Geometry\BBox.cpp" />
+    <ClCompile Include="..\src\Geometry\BoundingINode.cpp" />
+    <ClCompile Include="..\src\Geometry\BoundingLNode.cpp" />
+    <ClCompile Include="..\src\Geometry\BoundingNode.cpp" />
+    <ClCompile Include="..\src\Geometry\BoundingTree.cpp" />
+    <ClCompile Include="..\src\Geometry\BSPTree.cpp" />
+    <ClCompile Include="..\src\Geometry\build_bbtree.cpp" />
+    <ClCompile Include="..\src\Geometry\geo_load.cpp" />
+    <ClCompile Include="..\src\Geometry\geo_obj_load.cpp" />
+    <ClCompile Include="..\src\Geometry\GradientFilter.cpp" />
+    <ClCompile Include="..\src\Geometry\load_raw.cpp" />
+    <ClCompile Include="..\src\Geometry\Neighbours.cpp" />
+    <ClCompile Include="..\src\Geometry\OBox.cpp" />
+    <ClCompile Include="..\src\Geometry\Polygonizer.cpp" />
+    <ClCompile Include="..\src\Geometry\QEM.cpp" />
+    <ClCompile Include="..\src\Geometry\rply.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\src\Geometry\rply_load.cpp" />
+    <ClCompile Include="..\src\Geometry\tessellate.cpp" />
+    <ClCompile Include="..\src\Geometry\ThreeDDDA.cpp" />
+    <ClCompile Include="..\src\Geometry\Triangle.cpp" />
+    <ClCompile Include="..\src\Geometry\TrilinFilter.cpp" />
+    <ClCompile Include="..\src\Geometry\TriMesh.cpp" />
+    <ClCompile Include="..\src\Geometry\verification.cpp" />
+    <ClCompile Include="..\src\GLGraphics\Console.cpp" />
+    <ClCompile Include="..\src\GLGraphics\draw.cpp" />
+    <ClCompile Include="..\src\GLGraphics\glsl_shader.cpp" />
+    <ClCompile Include="..\src\GLGraphics\GLViewController.cpp" />
+    <ClCompile Include="..\src\GLGraphics\IDBufferWireFrameRenderer.cpp" />
+    <ClCompile Include="..\src\GLGraphics\image_DXT.c" />
+    <ClCompile Include="..\src\GLGraphics\image_helper.c" />
+    <ClCompile Include="..\src\GLGraphics\ManifoldRenderer.cpp" />
+    <ClCompile Include="..\src\GLGraphics\QuatTrackBall.cpp" />
+    <ClCompile Include="..\src\GLGraphics\SimpleTrackBall.cpp" />
+    <ClCompile Include="..\src\GLGraphics\SinglePassWireframeRenderer.cpp" />
+    <ClCompile Include="..\src\GLGraphics\SOIL.c" />
+    <ClCompile Include="..\src\GLGraphics\stb_image.c" />
+    <ClCompile Include="..\src\GLGraphics\stb_image_write.c" />
+    <ClCompile Include="..\src\GL\glew.c" />
+    <ClCompile Include="..\src\HMesh\cleanup.cpp" />
+    <ClCompile Include="..\src\HMesh\ConnectivityKernel.cpp" />
+    <ClCompile Include="..\src\HMesh\load.cpp" />
+    <ClCompile Include="..\src\HMesh\Manifold.cpp" />
+    <ClCompile Include="..\src\HMesh\obj_load.cpp" />
+    <ClCompile Include="..\src\HMesh\obj_save.cpp" />
+    <ClCompile Include="..\src\HMesh\off_load.cpp" />
+    <ClCompile Include="..\src\HMesh\off_save.cpp" />
+    <ClCompile Include="..\src\HMesh\ply_load.cpp" />
+    <ClCompile Include="..\src\HMesh\quadric_simplify.cpp" />
+    <ClCompile Include="..\src\HMesh\refine_edges.cpp" />
+    <ClCompile Include="..\src\HMesh\triangulate.cpp" />
+    <ClCompile Include="..\src\HMesh\x3d_load.cpp" />
+    <ClCompile Include="..\src\HMesh\x3d_save.cpp" />
+    <ClCompile Include="..\src\LinAlg\LapackFunc.cpp" />
+    <ClCompile Include="..\src\LinAlg\LinAlgIO.cpp" />
+    <ClCompile Include="..\src\Util\HashKey.cpp" />
+    <ClCompile Include="..\src\Util\Parse.cpp" />
+    <ClCompile Include="..\src\Util\string_utils.cpp" />
+    <ClCompile Include="..\src\Util\XmlParser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\CGLA\ArithMatFloat.h" />
+    <ClInclude Include="..\src\CGLA\ArithQuat.h" />
+    <ClInclude Include="..\src\CGLA\ArithSqMat2x2Float.h" />
+    <ClInclude Include="..\src\CGLA\ArithSqMat3x3Float.h" />
+    <ClInclude Include="..\src\CGLA\ArithSqMat4x4Float.h" />
+    <ClInclude Include="..\src\CGLA\ArithSqMatFloat.h" />
+    <ClInclude Include="..\src\CGLA\ArithVec.h" />
+    <ClInclude Include="..\src\CGLA\ArithVec2Float.h" />
+    <ClInclude Include="..\src\CGLA\ArithVec3Float.h" />
+    <ClInclude Include="..\src\CGLA\ArithVec3Int.h" />
+    <ClInclude Include="..\src\CGLA\ArithVec4Float.h" />
+    <ClInclude Include="..\src\CGLA\ArithVec4Int.h" />
+    <ClInclude Include="..\src\CGLA\ArithVecFloat.h" />
+    <ClInclude Include="..\src\CGLA\ArithVecInt.h" />
+    <ClInclude Include="..\src\CGLA\BitMask.h" />
+    <ClInclude Include="..\src\CGLA\CGLA.h" />
+    <ClInclude Include="..\src\CGLA\eigensolution.h" />
+    <ClInclude Include="..\src\CGLA\ExceptionStandard.h" />
+    <ClInclude Include="..\src\CGLA\Mat2x2d.h" />
+    <ClInclude Include="..\src\CGLA\Mat2x2f.h" />
+    <ClInclude Include="..\src\CGLA\Mat2x3d.h" />
+    <ClInclude Include="..\src\CGLA\Mat2x3f.h" />
+    <ClInclude Include="..\src\CGLA\Mat3x3d.h" />
+    <ClInclude Include="..\src\CGLA\Mat3x3f.h" />
+    <ClInclude Include="..\src\CGLA\Mat4x4d.h" />
+    <ClInclude Include="..\src\CGLA\Mat4x4f.h" />
+    <ClInclude Include="..\src\CGLA\Quatd.h" />
+    <ClInclude Include="..\src\CGLA\Quaternion.h" />
+    <ClInclude Include="..\src\CGLA\Quatf.h" />
+    <ClInclude Include="..\src\CGLA\statistics.h" />
+    <ClInclude Include="..\src\CGLA\TableTrigonometry.h" />
+    <ClInclude Include="..\src\CGLA\UnitVector.h" />
+    <ClInclude Include="..\src\CGLA\Vec2d.h" />
+    <ClInclude Include="..\src\CGLA\Vec2f.h" />
+    <ClInclude Include="..\src\CGLA\Vec2i.h" />
+    <ClInclude Include="..\src\CGLA\Vec2ui.h" />
+    <ClInclude Include="..\src\CGLA\Vec3d.h" />
+    <ClInclude Include="..\src\CGLA\Vec3f.h" />
+    <ClInclude Include="..\src\CGLA\Vec3Hf.h" />
+    <ClInclude Include="..\src\CGLA\Vec3i.h" />
+    <ClInclude Include="..\src\CGLA\Vec3uc.h" />
+    <ClInclude Include="..\src\CGLA\Vec3usi.h" />
+    <ClInclude Include="..\src\CGLA\Vec4d.h" />
+    <ClInclude Include="..\src\CGLA\Vec4f.h" />
+    <ClInclude Include="..\src\CGLA\Vec4i.h" />
+    <ClInclude Include="..\src\CGLA\Vec4uc.h" />
+    <ClInclude Include="..\src\Geometry\AABox.h" />
+    <ClInclude Include="..\src\Geometry\AncestorGrid.h" />
+    <ClInclude Include="..\src\Geometry\BBox.h" />
+    <ClInclude Include="..\src\Geometry\BoundingINode.h" />
+    <ClInclude Include="..\src\Geometry\BoundingLNode.h" />
+    <ClInclude Include="..\src\Geometry\BoundingNode.h" />
+    <ClInclude Include="..\src\Geometry\BoundingTree.h" />
+    <ClInclude Include="..\src\Geometry\BSPTree.h" />
+    <ClInclude Include="..\src\Geometry\build_bbtree.h" />
+    <ClInclude Include="..\src\Geometry\Cell.h" />
+    <ClInclude Include="..\src\Geometry\GradientFilter.h" />
+    <ClInclude Include="..\src\Geometry\GridAlgorithm.h" />
+    <ClInclude Include="..\src\Geometry\HGrid.h" />
+    <ClInclude Include="..\src\Geometry\IndexedFaceSet.h" />
+    <ClInclude Include="..\src\Geometry\KDTree.h" />
+    <ClInclude Include="..\src\Geometry\load.h" />
+    <ClInclude Include="..\src\Geometry\load_raw.h" />
+    <ClInclude Include="..\src\Geometry\Material.h" />
+    <ClInclude Include="..\src\Geometry\Neighbours.h" />
+    <ClInclude Include="..\src\Geometry\obj_load.h" />
+    <ClInclude Include="..\src\Geometry\OBox.h" />
+    <ClInclude Include="..\src\Geometry\ply_load.h" />
+    <ClInclude Include="..\src\Geometry\Polygonizer.h" />
+    <ClInclude Include="..\src\Geometry\QEM.h" />
+    <ClInclude Include="..\src\Geometry\Ray.h" />
+    <ClInclude Include="..\src\Geometry\RGrid.h" />
+    <ClInclude Include="..\src\Geometry\rply.h" />
+    <ClInclude Include="..\src\Geometry\save_raw.h" />
+    <ClInclude Include="..\src\Geometry\tessellate.h" />
+    <ClInclude Include="..\src\Geometry\ThreeDDDA.h" />
+    <ClInclude Include="..\src\Geometry\Triangle.h" />
+    <ClInclude Include="..\src\Geometry\TrilinFilter.h" />
+    <ClInclude Include="..\src\Geometry\TriMesh.h" />
+    <ClInclude Include="..\src\Geometry\verification.h" />
+    <ClInclude Include="..\src\GLGraphics\Console.h" />
+    <ClInclude Include="..\src\GLGraphics\draw.h" />
+    <ClInclude Include="..\src\GLGraphics\gel_gl.h" />
+    <ClInclude Include="..\src\GLGraphics\gel_glu.h" />
+    <ClInclude Include="..\src\GLGraphics\gel_glut.h" />
+    <ClInclude Include="..\src\GLGraphics\glsl_shader.h" />
+    <ClInclude Include="..\src\GLGraphics\GLViewController.h" />
+    <ClInclude Include="..\src\GLGraphics\IDBufferWireFrameRenderer.h" />
+    <ClInclude Include="..\src\GLGraphics\image_DXT.h" />
+    <ClInclude Include="..\src\GLGraphics\image_helper.h" />
+    <ClInclude Include="..\src\GLGraphics\ManifoldRenderer.h" />
+    <ClInclude Include="..\src\GLGraphics\QuatTrackBall.h" />
+    <ClInclude Include="..\src\GLGraphics\SimpleTrackBall.h" />
+    <ClInclude Include="..\src\GLGraphics\SinglePassWireframeRenderer.h" />
+    <ClInclude Include="..\src\GLGraphics\SOIL.h" />
+    <ClInclude Include="..\src\GLGraphics\stbi_DDS_aug.h" />
+    <ClInclude Include="..\src\GLGraphics\stbi_DDS_aug_c.h" />
+    <ClInclude Include="..\src\GLGraphics\stb_image.h" />
+    <ClInclude Include="..\src\GLGraphics\stb_image_write.h" />
+    <ClInclude Include="..\src\GL\glew.h" />
+    <ClInclude Include="..\src\GL\glxew.h" />
+    <ClInclude Include="..\src\GL\wglew.h" />
+    <ClInclude Include="..\src\HMesh\AttributeVector.h" />
+    <ClInclude Include="..\src\HMesh\cleanup.h" />
+    <ClInclude Include="..\src\HMesh\ConnectivityKernel.h" />
+    <ClInclude Include="..\src\HMesh\ItemID.h" />
+    <ClInclude Include="..\src\HMesh\ItemVector.h" />
+    <ClInclude Include="..\src\HMesh\Iterators.h" />
+    <ClInclude Include="..\src\HMesh\load.h" />
+    <ClInclude Include="..\src\HMesh\Manifold.h" />
+    <ClInclude Include="..\src\HMesh\obj_load.h" />
+    <ClInclude Include="..\src\HMesh\obj_save.h" />
+    <ClInclude Include="..\src\HMesh\off_load.h" />
+    <ClInclude Include="..\src\HMesh\off_save.h" />
+    <ClInclude Include="..\src\HMesh\ply_load.h" />
+    <ClInclude Include="..\src\HMesh\quadric_simplify.h" />
+    <ClInclude Include="..\src\HMesh\refine_edges.h" />
+    <ClInclude Include="..\src\HMesh\triangulate.h" />
+    <ClInclude Include="..\src\HMesh\Walker.h" />
+    <ClInclude Include="..\src\HMesh\x3d_load.h" />
+    <ClInclude Include="..\src\HMesh\x3d_save.h" />
+    <ClInclude Include="..\src\LinAlg\LapackFunc.h" />
+    <ClInclude Include="..\src\LinAlg\LinAlgIO.h" />
+    <ClInclude Include="..\src\LinAlg\Matrix.h" />
+    <ClInclude Include="..\src\LinAlg\Vector.h" />
+    <ClInclude Include="..\src\Util\ArgExtracter.h" />
+    <ClInclude Include="..\src\Util\Grid2D.h" />
+    <ClInclude Include="..\src\Util\HashKey.h" />
+    <ClInclude Include="..\src\Util\HashTable.h" />
+    <ClInclude Include="..\src\Util\Parse.h" />
+    <ClInclude Include="..\src\Util\ResourceManager.h" />
+    <ClInclude Include="..\src\Util\string_utils.h" />
+    <ClInclude Include="..\src\Util\Timer.h" />
+    <ClInclude Include="..\src\Util\XmlParser.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
