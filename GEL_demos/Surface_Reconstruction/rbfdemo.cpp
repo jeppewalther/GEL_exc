@@ -315,7 +315,7 @@ void motion(int x, int y)
 
 void keyboard(unsigned char key, int x, int y)
 {
-	Vec3f c;
+    Vec3f c;
 	float r;
     switch (key) {
 		case 'q':
@@ -336,7 +336,7 @@ void keyboard(unsigned char key, int x, int y)
 				TestImplicit imp;
 				polygonize(mani, imp, 50, Vec3f(0, 0, 0), Vec3f(2,2,2));
 			}
-			bsphere(mani,(Vec3d)c, r);
+            bsphere(mani,(Manifold::Vec)c, r);
 			delete view_ctrl;
 			view_ctrl = new GLViewController(WINX, WINY, c, 1.5*r);
 			break;

@@ -13,7 +13,7 @@
 
 #include <algorithm>
 #include "../CGLA/Vec3d.h"
-
+#include <functional>
 #include "ConnectivityKernel.h"
 #include "Iterators.h"
 #include "Walker.h"
@@ -401,15 +401,15 @@ namespace HMesh
     }
     inline int circulate_vertex_ccw(const Manifold& m, VertexID v, std::function<void(VertexID)> f)
     {
-        return circulate_vertex_ccw(m, v, (std::function<void(Walker&)>)[&](Walker& w){f(w.vertex());});
+        return circulate_vertex_ccw(m, v, static_cast<std::function<void(Walker&)>>( [&](Walker& w){f(w.vertex());} ) );
     }
     inline int circulate_vertex_ccw(const Manifold& m, VertexID v, std::function<void(FaceID)> f)
     {
-        return circulate_vertex_ccw(m, v, (std::function<void(Walker&)>)[&](Walker& w){f(w.face());});
+        return circulate_vertex_ccw(m, v, static_cast<std::function<void(Walker&)>>( [&](Walker& w){f(w.face());} ) );
     }
     inline int circulate_vertex_ccw(const Manifold& m, VertexID v, std::function<void(HalfEdgeID)> f)
     {
-        return circulate_vertex_ccw(m, v, (std::function<void(Walker&)>)[&](Walker& w){f(w.halfedge());});
+        return circulate_vertex_ccw(m, v, static_cast<std::function<void(Walker&)>>( [&](Walker& w){f(w.halfedge());} ) );
     }
     
     inline int circulate_vertex_cw(const Manifold& m, VertexID v, std::function<void(Walker&)> f)
@@ -420,15 +420,15 @@ namespace HMesh
     }
     inline int circulate_vertex_cw(const Manifold& m, VertexID v, std::function<void(VertexID)> f)
     {
-        return circulate_vertex_cw(m, v, (std::function<void(Walker&)>)[&](Walker& w){f(w.vertex());});
+        return circulate_vertex_cw(m, v, static_cast<std::function<void(Walker&)>>( [&](Walker& w){f(w.vertex());} ) );
     }
     inline int circulate_vertex_cw(const Manifold& m, VertexID v, std::function<void(FaceID)> f)
     {
-        return circulate_vertex_cw(m, v, (std::function<void(Walker&)>)[&](Walker& w){f(w.face());});
+        return circulate_vertex_cw(m, v, static_cast<std::function<void(Walker&)>>( [&](Walker& w){f(w.face());} ) );
     }
     inline int circulate_vertex_cw(const Manifold& m, VertexID v, std::function<void(HalfEdgeID)> f)
     {
-        return circulate_vertex_cw(m, v, (std::function<void(Walker&)>)[&](Walker& w){f(w.halfedge());});
+        return circulate_vertex_cw(m, v, static_cast<std::function<void(Walker&)>>( [&](Walker& w){f(w.halfedge());} ) );
     }
     
     inline int circulate_face_ccw(const Manifold& m, FaceID f, std::function<void(Walker&)> g)
@@ -439,15 +439,15 @@ namespace HMesh
     }
     inline int circulate_face_ccw(const Manifold& m, FaceID f, std::function<void(VertexID)> g)
     {
-        return circulate_face_ccw(m, f, (std::function<void(Walker&)>)[&](Walker& w){g(w.vertex());});
+        return circulate_face_ccw(m, f, static_cast<std::function<void(Walker&)>>([&](Walker& w){g(w.vertex());}));
     }
     inline int circulate_face_ccw(const Manifold& m, FaceID f, std::function<void(FaceID)> g)
     {
-        return circulate_face_ccw(m, f, (std::function<void(Walker&)>)[&](Walker& w){g(w.face());});
+        return circulate_face_ccw(m, f, static_cast<std::function<void(Walker&)>>([&](Walker& w){g(w.face());}));
     }
     inline int circulate_face_ccw(const Manifold& m, FaceID f, std::function<void(HalfEdgeID)> g)
     {
-        return circulate_face_ccw(m, f, (std::function<void(Walker&)>)[&](Walker& w){g(w.halfedge());});
+        return circulate_face_ccw(m, f, static_cast<std::function<void(Walker&)>>([&](Walker& w){g(w.halfedge());}));
     }
     
     inline int circulate_face_cw(const Manifold& m, FaceID f, std::function<void(Walker&)> g)
@@ -458,15 +458,16 @@ namespace HMesh
     }
     inline int circulate_face_cw(const Manifold& m, FaceID f, std::function<void(VertexID)> g)
     {
-        return circulate_face_cw(m, f, (std::function<void(Walker&)>)[&](Walker& w){g(w.vertex());});
+        return circulate_face_cw(m, f, static_cast<std::function<void(Walker&)>>([&](Walker& w){g(w.vertex());}));
     }
     inline int circulate_face_cw(const Manifold& m, FaceID f, std::function<void(FaceID)> g)
     {
-        return circulate_face_cw(m, f, (std::function<void(Walker&)>)[&](Walker& w){g(w.face());});
+        return circulate_face_cw(m, f, static_cast<std::function<void(Walker&)>>([&](Walker& w){g(w.face());}));
     }
     inline int circulate_face_cw(const Manifold& m, FaceID f, std::function<void(HalfEdgeID)> g)
     {
-        return circulate_face_cw(m, f, (std::function<void(Walker&)>)[&](Walker& w){g(w.halfedge());});
+        return circulate_face_cw(m, f, static_cast<std::function<void(Walker&)>>([&](Walker& w){g(w.halfedge());}));
+
     }
     
 

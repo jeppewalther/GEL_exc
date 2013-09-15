@@ -186,9 +186,9 @@ namespace HMesh
             return false;
     
         vector<FaceID> faces;
-        int N = circulate_vertex_ccw(*this, vid, (std::function<void(FaceID)>)[&](FaceID f) {
+        int N = circulate_vertex_ccw(*this, vid, static_cast<std::function<void(FaceID)>>([&](FaceID f) {
             faces.push_back(f);
-        });
+        }));
         for(size_t i=0;i<N;++i)
             remove_face(faces[i]);
             
@@ -437,15 +437,15 @@ namespace HMesh
     {
         // get the one-ring of v0
         vector<VertexID> link0;
-        circulate_vertex_ccw(m, v0, (std::function<void(VertexID)>)[&](VertexID vn) {
+        circulate_vertex_ccw(m, v0, static_cast<std::function<void(VertexID)>>([&](VertexID vn) {
             link0.push_back(vn);
-        });
+        }));
 		
         // get the one-ring of v1
         vector<VertexID> link1;
-        circulate_vertex_ccw(m, v1, (std::function<void(VertexID)>)[&](VertexID vn) {
+        circulate_vertex_ccw(m, v1, static_cast<std::function<void(VertexID)>>([&](VertexID vn) {
             link1.push_back(vn);
-        });
+        }));
 		
         // sort the vertices of the two rings
         sort(link0.begin(), link0.end());
@@ -535,14 +535,14 @@ namespace HMesh
             
             
             if(v0b != v0a)
-                circulate_vertex_ccw(*this, v0b, (std::function<void(Walker&)>)[&](Walker hew) {
+                circulate_vertex_ccw(*this, v0b, static_cast<std::function<void(Walker&)>>([&](Walker hew) {
                     kernel.set_vert(hew.opp().halfedge(), v0a);
-                });
+                }));
             
             if(v1b != v1a)
-                circulate_vertex_ccw(*this, v1b, (std::function<void(Walker&)>)[&](Walker hew) {
+                circulate_vertex_ccw(*this, v1b, static_cast<std::function<void(Walker&)>>([&](Walker hew) {
                     kernel.set_vert(hew.opp().halfedge(), v1a);
-                });
+                }));
             
             if(v0a != v0b)
             {
@@ -1338,7 +1338,7 @@ namespace HMesh
 
     int valency(const Manifold& m, VertexID v)
     {
-        return circulate_vertex_ccw(m,v, (std::function<void(Walker&)>)[](Walker){});
+        return circulate_vertex_ccw(m,v, static_cast<std::function<void(Walker&)>>([](Walker){}));
     }
     
     Manifold::Vec normal(const Manifold& m, VertexID v)
@@ -1347,12 +1347,12 @@ namespace HMesh
         vector<Manifold::Vec> one_ring;
         
         // run through outgoing edges, and store them normalized
-        int N = circulate_vertex_ccw(m, v, (std::function<void(VertexID)>)[&](VertexID vn) {
+        int N = circulate_vertex_ccw(m, v, static_cast<std::function<void(VertexID)>>([&](VertexID vn) {
             Manifold::Vec edge = m.pos(vn) - p0;
             double l = length(edge);
             if(l > 0.0)
                 one_ring.push_back(edge/l);
-        });
+        }));
         
         if(N<2)
             return Manifold::Vec(0);
@@ -1383,23 +1383,23 @@ namespace HMesh
     bool connected(const Manifold& m, VertexID v0, VertexID v1)
     {
         bool c=false;
-        circulate_vertex_ccw(m, v0, (std::function<void(VertexID)>)[&](VertexID v){ c |= (v==v1);});
+        circulate_vertex_ccw(m, v0, static_cast<std::function<void(VertexID)>>([&](VertexID v){ c |= (v==v1);}));
         return c;
     }
 
     
     int no_edges(const Manifold& m, FaceID f)
     {
-        return circulate_face_ccw(m, f, (std::function<void(Walker&)>)[](Walker w){});
+        return circulate_face_ccw(m, f, static_cast<std::function<void(Walker&)>>([](Walker w){}));
     }
     
     Manifold::Vec normal(const Manifold& m, FaceID f)
     {
         vector<Manifold::Vec> v;
         
-        int k= circulate_face_ccw(m, f, (std::function<void(VertexID)>)[&](VertexID vid) {
+        int k= circulate_face_ccw(m, f, static_cast<std::function<void(VertexID)>>([&](VertexID vid) {
             v.push_back(m.pos(vid));
-        });
+        }));
         
         Manifold::Vec norm(0);
         for(int i=0;i<k;++i)
@@ -1419,9 +1419,9 @@ namespace HMesh
     {
         // Get all projected vertices
         vector<Manifold::Vec> vertices;
-        int N = circulate_face_ccw(m, fid, (std::function<void(VertexID)>)[&](VertexID vid) {
+        int N = circulate_face_ccw(m, fid, static_cast<std::function<void(VertexID)>>([&](VertexID vid) {
             vertices.push_back(m.pos(vid));
-        });
+        }));
 
         
         double area = 0;
@@ -1434,14 +1434,14 @@ namespace HMesh
     Manifold::Vec centre(const Manifold& m, FaceID f)
     {
         Manifold::Vec c(0);
-        int n = circulate_face_ccw(m, f, (std::function<void(VertexID)>)[&](VertexID v) {c+=m.pos(v);});
+        int n = circulate_face_ccw(m, f, static_cast<std::function<void(VertexID)>>([&](VertexID v) {c+=m.pos(v);}));
         return c / n;
     }
     
     double perimeter(const Manifold& m, FaceID f)
     {
         double l=0.0;
-        circulate_face_ccw(m, f, (std::function<void(HalfEdgeID)>)[&](HalfEdgeID h) { l+= length(m, h);});
+        circulate_face_ccw(m, f, static_cast<std::function<void(HalfEdgeID)>>([&](HalfEdgeID h) { l+= length(m, h);}));
         return l;
     }
     
