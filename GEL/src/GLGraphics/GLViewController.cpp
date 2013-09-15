@@ -4,6 +4,7 @@
  * For license and list of authors, see ../../doc/intro.pdf
  * ----------------------------------------------------------------------- */
 
+#include <Windows.h>
 #include <GL/glu.h>
 #include "GLViewController.h"
 #include "../CGLA/Mat3x3f.h"
