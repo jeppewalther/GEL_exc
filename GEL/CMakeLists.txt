@@ -28,8 +28,8 @@ IF(CMAKE_COMPILER_IS_GNUCC)
     set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake/modules)
 
     # Make sure we have the libraries
-    find_package(GLEW REQUIRED)
     find_package(OpenGL REQUIRED)
+    find_package(GLEW REQUIRED)
     find_package(GLUT REQUIRED)
     find_package(Lapack REQUIRED)
 
@@ -39,7 +39,7 @@ IF(CMAKE_COMPILER_IS_GNUCC)
     ADD_LIBRARY(GEL ${CGLA} ${HMesh} ${GLGraphics} ${Geometry} ${Util} ${LinAlg})
 
     #Link libs
-    TARGET_LINK_LIBRARIES(GEL ${OPENGL_LIBRARIES} ${LAPACK_LIBRARIES} ${GLEW_LIBRARY} ${GLUT_LIBRARY})
+    TARGET_LINK_LIBRARIES(GEL ${LAPACK_LIBRARIES} ${GLEW_LIBRARY} ${GLUT_LIBRARY} ${OPENGL_LIBRARIES} glut GLU Gl )
 
     set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 ENDIF()
