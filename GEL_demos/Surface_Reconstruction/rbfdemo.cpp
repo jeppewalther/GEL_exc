@@ -315,7 +315,7 @@ void motion(int x, int y)
 
 void keyboard(unsigned char key, int x, int y)
 {
-    Vec3f c;
+    CGLA::Vec3d c;
 	float r;
     switch (key) {
 		case 'q':
@@ -336,9 +336,10 @@ void keyboard(unsigned char key, int x, int y)
 				TestImplicit imp;
 				polygonize(mani, imp, 50, Vec3f(0, 0, 0), Vec3f(2,2,2));
 			}
-            bsphere(mani,(Manifold::Vec)c, r);
+            bsphere(mani, c, r);
+            CGLA::Vec3f c2(c);
 			delete view_ctrl;
-			view_ctrl = new GLViewController(WINX, WINY, c, 1.5*r);
+            view_ctrl = new GLViewController(WINX, WINY, c2, 1.5*r);
 			break;
     }
     create_display_list = true;
@@ -359,10 +360,11 @@ int main(int argc, char **argv)
     glutIdleFunc(animate);
 	
 	make_height_field();
-    Vec3f c(0, 0, 0);
+    Vec3d c(0, 0, 0);
     float r = 3;
-	bsphere(mani,(Vec3d)c, r);
-    view_ctrl = new GLViewController(WINX, WINY, c, 1.5*r);
+    bsphere(mani, c, r);
+    CGLA::Vec3f c2(c);
+    view_ctrl = new GLViewController(WINX, WINY, c2, 1.5*r);
 	
     // Initialization of extension wrangler. Very important call.
     GLenum err = glewInit();
